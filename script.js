@@ -10,13 +10,13 @@ const projectData = {
         title: "MUNER New York",
         subtitle: "Simulazione ONU (2023-2024)",
         description: "Esperienza internazionale svoltasi interamente in lingua inglese a New York. Nel ruolo di delegato della Lituania, ho affinato capacità di mediazione, public speaking e stesura di risoluzioni formali.",
-        image: "progetto2.jpg"
+        image: "IMG_8294.HEIC"
     },
     project3: {
         title: "Tour Virtuale & Lab Ducati",
         subtitle: "Accademia Belle Arti (2021-2022)",
         description: "Sviluppo di un tour virtuale interattivo del laboratorio di fisica e della scuola in collaborazione con l'Accademia di Venezia, unito alla frequenza del laboratorio sperimentale Ducati nello stesso anno.",
-        image: "progetto3.jpg"
+        image: "IMG_4838.HEIC"
     }
 };
 
