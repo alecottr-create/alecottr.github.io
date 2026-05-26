@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alessandro Cottrer | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://fav.farm/📸" />
 </head>
 <body>
 
@@ -12,6 +13,7 @@
         <div class="logo">AC</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#percorso">Percorso</a></li>
             <li><a href="#progetti">Progetti</a></li>
             <li><a href="#competenze">Competenze</a></li>
             <li><a href="#contatti">Contatti</a></li>
@@ -19,18 +21,40 @@
     </nav>
 
     <header id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Alessandro Cottrer</h1>
-            <h2>Tra Scienza e Creatività Visiva</h2>
-            <p>Studente di Scienze Applicate, Graphic Designer e Team Player. Trasformo concetti complessi in soluzioni visive d'impatto.</p>
-            <div class="buttons">
-                <a href="#progetti" class="btn primary">Guarda i Progetti</a>
-                <a href="mailto:alecottr@gmail.com" class="btn secondary">Contattami</a>
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <h1>Alessandro Cottrer</h1>
+                <h2>Tra Scienza e Creatività Visiva</h2>
+                <p>Studente di Scienze Applicate, Graphic Designer e Team Player. Trasformo concetti complessi in soluzioni visive d'impatto.</p>
+                <div class="buttons">
+                    <a href="#progetti" class="btn primary">Guarda i Progetti</a>
+                    <a href="mailto:alecottr@gmail.com" class="btn secondary">Contattami</a>
+                </div>
+            </div>
+            <div class="hero-image-content">
+                <img src="tuafoto.jpg" alt="Alessandro Cottrer" class="profile-pic" onerror="this.src='https://via.placeholder.com/300?text=La+Tua+Foto'">
             </div>
         </div>
     </header>
 
-    <section id="progetti" class="section">
+    <section id="percorso" class="section">
+        <h2 class="section-title">Percorso Scolastico</h2>
+        <p class="section-subtitle">La mia formazione tra ambito scientifico e progetti internazionali</p>
+        <div class="education-box">
+            <div class="education-item">
+                <span class="education-date">In corso</span>
+                <h3>Liceo Scientifico delle Scienze Applicate</h3>
+                <p>Focus approfondito su matematica, fisica, informatica e scienze naturali. Sviluppo di un forte approccio analitico e di problem solving applicato a progetti tecnologici e di design.</p>
+            </div>
+            <div class="education-item">
+                <span class="education-date">2023 - 2024</span>
+                <h3>Progetto Internazionale MUNER New York</h3>
+                <p>Partecipazione alla simulazione diplomatica degli organi ONU presso l'Headquarters delle Nazioni Unite a New York. Studio intensivo di relazioni internazionali, public speaking e cooperazione globale in lingua inglese.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="progetti" class="section bg-light">
         <h2 class="section-title">I Miei Progetti</h2>
         <p class="section-subtitle">Clicca su una scheda per vedere i dettagli e l'immagine del progetto</p>
         
@@ -59,7 +83,7 @@
         </div>
     </section>
 
-    <section id="competenze" class="section bg-light">
+    <section id="competenze" class="section">
         <h2 class="section-title">Competenze</h2>
         <div class="grid cols-3">
             <div class="skill-box">
@@ -76,7 +100,8 @@
             </div>
         </div>
     </section>
-<section id="contatti" class="section">
+
+    <section id="contatti" class="section bg-light">
         <h2 class="section-title">Restiamo in Contatto</h2>
         <div class="contact-container">
             <p>Sei interessato a una collaborazione o vuoi semplicemente fare due chiacchiere sul mio percorso?</p>
@@ -98,8 +123,7 @@
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div id="modal-body-content">
-                </div>
+            <div id="modal-body-content"></div>
         </div>
     </div>
 
