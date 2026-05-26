@@ -4,31 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alessandro Cottrer | Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; background-color: #f4f4f9; color: #333; margin: 0; padding: 20px; }
-        header { background: #0a192f; color: #fff; padding: 40px 20px; text-align: center; }
-        .container { max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #0a192f; }
-        header h1 { color: #fff; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Alessandro Cottrer</h1>
-        <p>Studente di Scienze Applicate | Graphic Designer</p>
+    <nav class="navbar">
+        <div class="logo">AC</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#progetti">Progetti</a></li>
+            <li><a href="#competenze">Competenze</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Alessandro Cottrer</h1>
+            <h2>Tra Scienza e Creatività Visiva</h2>
+            <p>Studente di Scienze Applicate, Graphic Designer e Team Player. Trasformo concetti complessi in soluzioni visive d'impatto.</p>
+            <div class="buttons">
+                <a href="#progetti" class="btn primary">Guarda i Progetti</a>
+                <a href="mailto:alecottr@gmail.com" class="btn secondary">Contattami</a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <h2>Su di me</h2>
-        <p>Sono una persona creativa con il desiderio di intraprendere percorsi scientifici e lavorare nel modo più efficace possibile.</p>
+    <section id="progetti" class="section">
+        <h2 class="section-title">I Miei Progetti</h2>
+        <p class="section-subtitle">Clicca su una scheda per vedere i dettagli e l'immagine del progetto</p>
         
-        <h2>Progetti in evidenza</h2>
-        <ul>
-            <li><strong>Computer Project (2024-2025):</strong> Graphic designer per un sito web a utilità sostenibile.</li>
-            <li><strong>MUNER New York (2023-2024):</strong> Simulazione ONU in lingua inglese come delegato della Lituania.</li>
-        </ul>
+        <div class="grid">
+            <div class="card" onclick="openModal('project1')">
+                <div class="card-info">
+                    <h3>Computer Project</h3>
+                    <p>Web Design Sostenibile</p>
+                    <span class="more-link">Scopri di più &rarr;</span>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('project2')">
+                <div class="card-info">
+                    <h3>MUNER New York</h3>
+                    <p>Simulazione ONU</p>
+                    <span class="more-link">Scopri di più &rarr;</span>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('project3')">
+                <div class="card-info">
+                    <h3>Tour Virtuale Ducati</h3>
+                    <p>Fisica & Belle Arti</p>
+                    <span class="more-link">Scopri di più &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competenze" class="section bg-light">
+        <h2 class="section-title">Competenze</h2>
+        <div class="grid cols-3">
+            <div class="skill-box">
+                <h4>Tech & Design</h4>
+                <p>Coding (HTML/CSS/JS), UI/UX Graphic Design, Pacchetto Office avanzato.</p>
+            </div>
+            <div class="skill-box">
+                <h4>Scientifiche</h4>
+                <p>Analisi matematica, calcolo infinitesimale, fisica sperimentale, chimica e biologia.</p>
+            </div>
+            <div class="skill-box">
+                <h4>Soft Skills</h4>
+                <p>Leadership, eccellente lavoro in squadra, mediazione e organizzazione dei flussi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="section">
+        <h2 class="section-title">Restiamo in Contatto</h2>
+        <div class="contact-container">
+            <p>Sei interessato a una collaborazione o vuoi semplicemente fare due chiacchiere sul mio percorso?</p>
+            <p class="contact-info">✉️ alecottr@gmail.com | 📞 +39 338 4236355</p>
+            <p class="contact-info">📍 Roma, Italia</p>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body-content">
+                </div>
+        </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
