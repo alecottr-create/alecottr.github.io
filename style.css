@@ -53,16 +53,29 @@ body {
     color: #64ffda;
 }
 
-/* Hero Section (Benvenuto) */
+/* Hero Section (Layout Professionale a due colonne) */
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #0a192f 0%, #172a45 100%);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 20px;
+    padding: 100px 20px 60px 20px;
+}
+
+.hero-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text-content {
+    flex: 1;
+    text-align: left;
 }
 
 .hero-content h1 {
@@ -70,16 +83,37 @@ body {
     margin-bottom: 10px;
 }
 
-.hero-content h2 {
+.hero-text-content h2 {
     font-size: 24px;
-    color: #8892b0;
+    color: #64ffda;
     margin-bottom: 20px;
 }
 
-.hero-content p {
-    max-width: 600px;
-    margin: 0 auto 30px auto;
+.hero-text-content p {
     color: #a8b2d1;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.hero-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Foto Profilo Professionale Circolare */
+.profile-pic {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #64ffda;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.03);
 }
 
 .btn {
@@ -88,7 +122,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    margin-right: 15px;
     transition: all 0.3s;
 }
 
@@ -137,7 +171,47 @@ body {
     margin-bottom: 40px;
 }
 
-/* Griglie e Layout */
+/* Stile Casella Percorso Scolastico */
+.education-box {
+    background: #172a45;
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 5px solid #64ffda;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.education-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-date {
+    display: inline-block;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.education-item h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.education-item p {
+    color: #cbd5e1;
+}
+
+/* Griglie e Layout Fluidi */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,7 +284,7 @@ body {
     margin-top: 20px;
 }
 
-/* FINESTRA MODAL (Stile Pop-up) */
+/* FINESTRA MODAL */
 .modal {
     display: none; 
     position: fixed; 
@@ -249,13 +323,28 @@ body {
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 20px;
-    background: #eaeaea; /* Sfondo di prova in attesa delle tue immagini */
 }
 
-/* Responsive per Cellulari */
+/* MEDIA QUERIES: IL SEGRETO DEL RESPONSIVE (Adattabilità totale) */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Sposta la foto SOPRA il testo sui tablet */
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-text-content {
+        text-align: center;
+    }
+    .btn {
+        margin: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar { padding: 15px 20px; }
-    .nav-links { display: none; } /* Semplificato per ora */
-    .cols-3 { grid-template-columns: 1fr; }
+    .nav-links { display: none; } /* Nasconde il menu esteso sui telefoni */
+    .cols-3 { grid-template-columns: 1fr; } /* Competenze diventano a 1 colonna */
     .hero-content h1 { font-size: 36px; }
+    .profile-pic { width: 240px; height: 240px; } /* Foto più piccola sui telefoni */
+    .section { padding: 60px 20px; }
 }
