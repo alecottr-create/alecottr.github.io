@@ -16,7 +16,7 @@ const projectData = {
     project3: {
         title: "Tour Virtuale Interattivo",
         subtitle: "Accademia Belle Arti di Venezia",
-        description: "Sviluppo guidato di un tour virtuale interattivo volto alla digitalizzazione e valorizzazione degli spazi scolastici. Un progetto che unisce competenze tecniche digitali all'estetica visiva e spaziale.<br><br>👉 <a href='https://www.theasys.io/viewer/05pHJM1n7WCr3jPGz7oTlJB3ASBeuE/' target='_blank' style='color: #f8fafc; text-decoration: none; font-weight: bold; border-bottom: 1px solid #64ffda;'>Clicca qui per esplorare il Tour Virtuale su Theasys</a>",
+        description: "Sviluppo guidato di un tour virtuale interattivo volto alla digitalizzazione e valorizzazione degli spazi scolastici. Un progetto che unisce competenze tecniche digitali all'estetica visiva e spaziale.<br><br>👉 <a href='https://www.theasys.io/viewer/05pHJM1n7WCr3jPGz7oTlJB3ASBeuE/' target='_blank' style='color: #64ffda; text-decoration: none; font-weight: bold; border-bottom: 1px solid #64ffda;'>Clicca qui per esplorare il Tour Virtuale su Theasys</a>",
         image: "venezia.jpg"
     },
     project4: {
