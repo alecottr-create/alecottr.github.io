@@ -268,14 +268,27 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 8px;
-    border-top: 4px solid #0a192f;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(10, 25, 47, 0.08); /* Bordo leggerissimo anti-confusione */
+    border-top: 4px solid #64ffda; /* Nuova riga acquamarina coordinata */
+    box-shadow: 0 8px 20px rgba(10, 25, 47, 0.04); /* Ombra morbida professionale */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px); /* Effetto sollevamento */
+    box-shadow: 0 12px 25px rgba(10, 25, 47, 0.08);
 }
 
 .skill-box h4 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #0a192f;
+    color: #0a192f; /* Colore blu scuro */
+    font-weight: bold;
+}
+
+.skill-box p {
+    color: #555;
+    font-size: 15px;
 }
 
 /* Contatti */
