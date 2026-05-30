@@ -1,22 +1,29 @@
 // Database dei dati dei progetti (Testi e Immagini)
+// Database dei dati dei progetti (Testi e Immagini)
 const projectData = {
     project1: {
         title: "Computer Project",
         subtitle: "Web Design Sostenibile (2024-2025)",
         description: "Lavoro di gruppo focalizzato sulla creazione di una piattaforma web ad utilità sostenibile. Come graphic designer mi sono occupato dell'interfaccia utente (UI), strutturando un layout pulito, intuitivo e moderno.",
-        image: "progetto1.jpg" // Sostituisci in futuro con il nome della tua immagine vera
+        image: "progetto1.jpg"
     },
     project2: {
         title: "MUNER New York",
         subtitle: "Simulazione ONU (2023-2024)",
         description: "Esperienza internazionale svoltasi interamente in lingua inglese a New York. Nel ruolo di delegato della Lituania, ho affinato capacità di mediazione, public speaking e stesura di risoluzioni formali.",
-        image: "IMG_4838.HEIC"
+        image: "IMG_4838.jpg"
     },
     project3: {
-        title: "Tour Virtuale & Lab Ducati",
-        subtitle: "Accademia Belle Arti (2021-2022)",
-        description: "Sviluppo di un tour virtuale interattivo del laboratorio di fisica e della scuola in collaborazione con l'Accademia di Venezia, unito alla frequenza del laboratorio sperimentale Ducati nello stesso anno.",
-        image: "IMG_8294.HEIC"
+        title: "Tour Virtuale Interattivo",
+        subtitle: "Accademia Belle Arti di Venezia",
+        description: "Sviluppo guidato di un tour virtuale interattivo volto alla digitalizzazione e valorizzazione degli spazi scolastici. Un progetto che unisce competenze tecniche digitali all'estetica visiva e spaziale.",
+        image: "venezia.jpg"
+    },
+    project4: {
+        title: "Fisica Sperimentale",
+        subtitle: "Laboratorio Ducati (2021-2022)",
+        description: "Attività laboratoriale avanzata incentrata sulla fisica sperimentale e applicata nel settore automotive presso le strutture Ducati. Analisi di dati e studio dei principi della dinamica in un contesto aziendale d'eccellenza.",
+        image: "IMG_8294.jpg"
     }
 };
 
