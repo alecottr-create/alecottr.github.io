@@ -220,6 +220,19 @@ body {
 }
 
 /* Griglie e Layout */
+/* Griglia specifica per i 4 progetti (Layout 2x2 elegante) */
+.projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 35px;
+}
+
+/* Modifica responsive per far tornare i progetti a 1 colonna sola sui cellulari */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+    }
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -231,36 +244,69 @@ body {
 }
 
 /* Schede Progetti */
+/* INCOLLA QUESTO NUOVO BLOCCO AL LORO POSTO */
 .card {
-    background: #172a45;
+    background: linear-gradient(145deg, #172a45 0%, #0c1e36 100%);
     color: #fff;
-    border-radius: 8px;
-    height: 220px;
+    border-radius: 12px;
+    height: 240px;
     display: flex;
     align-items: flex-end;
-    padding: 25px;
+    padding: 30px;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s;
-    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 10px 25px rgba(10, 25, 47, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0) 100%);
+    z-index: 1;
+}
+
+.card-info {
+    position: relative;
+    z-index: 2;
+    width: 100%;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(100, 255, 218, 0.1);
+    transform: translateY(-8px);
+    border-color: #64ffda;
+    box-shadow: 0 15px 35px rgba(100, 255, 218, 0.15);
 }
 
 .card h3 {
     color: #64ffda;
-    font-size: 22px;
-    margin-bottom: 5px;
+    font-size: 24px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 15px;
 }
 
 .more-link {
     display: block;
     margin-top: 15px;
     font-size: 14px;
-    color: #a8b2d1;
+    color: #64ffda;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .more-link {
+    transform: translateX(5px);
 }
 
 /* Box Competenze */
